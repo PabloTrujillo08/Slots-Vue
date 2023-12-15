@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Supermercado</title>
+    <script src="Scripts/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <super-component :items="supermercado">
+            <legend slot="header" style="width: 50%; margin: 0 auto; border: 1px solid #ddd; padding: 10px; text-align: center;">{{header}}</legend>
+            <template slot="item" slot-scope="props">
+                <table class="table table-bordered table-sm" style="width: 50%; margin: 0 auto;">
+                    <thead>
+                        <tr>
+                            <th>Nombre del producto</th>
+                            <th>Cantidad disponible</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{props.item.nombre}}</td>
+                            <td>{{props.item.cantidad}} unidades</td>
+                            <td>{{props.item.precio}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </template>
+        </super-component>
+    </div>
+</body>
+</html>
+
+
+<script>
+    const SuperComponent = {
+        template:
+            `
+              <div>
+               <slot name="header"></slot>
+               <slot name="item" v-for="item in items" :item="item"></slot>
+              </div>
+                    `,
+        props: ['items']
+    }
+
+    new Vue({
+        el: "#app",
+        components: { 'super-component': SuperComponent },
+        data() {
+            return {
+                header: 'Supermercado',
+                supermercado: [
+                    { nombre: 'Manzanas', cantidad: 5, precio: '2.50 €' },
+                    { nombre: 'Pan', cantidad: 2, precio: '1.00 €' },
+                    { nombre: 'Sandías', cantidad: 3, precio: '3.00 €' },
+                ],
+            }
+        }
+    });
+</script>
