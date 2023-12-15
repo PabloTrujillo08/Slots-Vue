@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialSlots", "TutorialSlots\TutorialSlots.csproj", "{870D4115-5A10-4082-AA66-974D86BDAE7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{870D4115-5A10-4082-AA66-974D86BDAE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870D4115-5A10-4082-AA66-974D86BDAE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870D4115-5A10-4082-AA66-974D86BDAE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870D4115-5A10-4082-AA66-974D86BDAE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FEF7EFE-7D9B-42CB-968A-5344D5503C15}
+	EndGlobalSection
+EndGlobal
